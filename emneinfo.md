@@ -1,4 +1,4 @@
-## Faglig innhold
+## 📖:ship: Faglig innhold
 Emnet er en generell introduksjon til skipsdesign, og med fokus på hydrostatikk, stabilitet og general arrangement. 
 
 Temaer: 
@@ -12,7 +12,7 @@ Temaer:
 - Bruk av software for tegning og skipstekniske beregninger
 - Bærekraftig skipsdesign
 
-## Læringsutbytte
+## 💡👩‍🔬 Læringsutbytte 
 Etter å ha fullført dette emnet, skal kandidaten skal ha:
 
 - kunnskap om:
@@ -33,11 +33,11 @@ Etter å ha fullført dette emnet, skal kandidaten skal ha:
     - Ulike skipstyper
     - Myndighets og klassekrav
 
-## Læringsform og aktiviteter
+## 👨‍🏫🥼Læringsform og aktiviteter 
 
 Forelesninger i klasserom og laboratorie. Ukentlige obligatoriske øvinger eller laboratorieoppgaver, og en prosjektmappe som skal innleveres til slutt i emnet.
 
-## Vurdering
+## 🔬🔍 Vurdering 
 
 4t skriftlig skoleeksamen
 
