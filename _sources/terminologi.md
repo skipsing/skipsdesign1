@@ -16,6 +16,9 @@ For å regne ut dette i seilskutetiden så hadde de et tau feste til en bøtte. 
 
 For å beskrive et objekts romlige form brukes ofte *lengde*, *bredde* og *dybde*. For et fartøy er dette fartøyets *hoveddimensjoner* 
 
+### Lengde 
+
+For skip så 
 - Lengde over alt, forkortet *$L_{oa}$* 
 - Perpendikulærlengde, ofte forkortet til bare *$L_{pp}$* og er vanligvis den lengden man refererer til. Den er definert som lengden mellom der vannlinjen skjærer baugen og senter for roret 
 - Bredde 
