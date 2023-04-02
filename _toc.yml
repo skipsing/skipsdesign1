@@ -4,6 +4,10 @@
 format: jb-book
 root: intro
 chapters:
+- file: emneinfo
+- file: terminologi
+    sections: 
+    -file: hoveddimensjoner
 - file: markdown
 - file: notebooks
 - file: markdown-notebooks
