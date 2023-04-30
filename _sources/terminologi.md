@@ -9,7 +9,7 @@ date: 30.04.23
 ---
 # Terminologi 
 
-> {sub-ref}`today` | {sub-ref}`wordcount-words` ord | {sub-ref}`wordcount-minutes` min lesetid | {{ title }} {{ github }}
+> {sub-ref}`today` | {sub-ref}`wordcount-words` ord | {sub-ref}`wordcount-minutes` min lesetid | {{ page.title }} {{ page.github }}
 
 
 > Terminologi er ord og uttrykk – termar – som er typiske for ei verksemd, eit fag eller ein vitskap. 
