@@ -8,7 +8,6 @@ github: https://skipsing.github.io/skipsdesign1/
 date: 30.04.23
 ---
 
-(section-label)=
 # Terminologi 
 
 > Terminologi er ord og uttrykk – termar – som er typiske for ei verksemd, eit fag eller ein vitskap. 

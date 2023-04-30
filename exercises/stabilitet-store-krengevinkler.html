@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Metasenterets endring ved krenging &#8212; Skipsdesign I</title>
+    <title>Løsning KN kurver &#8212; Skipsdesign I</title>
   
   
   
@@ -161,11 +161,9 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../emneinfo.html">Emneinfo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../terminologi.html">Terminologi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/hoveddimensjoner.html">:straight_ruler: Hoveddimensjoner</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../teknisk_tegning.html">Teknisk tegning</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Metasenterets endring ved krenging</a></li>
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Løsning KN kurver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../admonition.html">Admonitions</a></li>
 </ul>
 
@@ -350,7 +348,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Metasenterets endring ved krenging</h1>
+    <h1>Løsning KN kurver</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -360,12 +358,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Metasenterets endring ved krenging</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasseselskaps-krav-til-areal-under-gz-kurve">Klasseselskaps krav til areal under GZ-kurve</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#krav-til-rettende-arm">Krav til rettende arm</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#forklarende-plot-brukt-i-losningsforslaget">Forklarende plot brukt i løsningsforslaget</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metasenterets-endring-ved-krenging">Metasenterets endring ved krenging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klasseselskaps-krav-til-areal-under-gz-kurve">Klasseselskaps krav til areal under GZ-kurve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krav-til-rettende-arm">Krav til rettende arm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forklarende-plot-brukt-i-losningsforslaget">Forklarende plot brukt i løsningsforslaget</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -388,6 +385,8 @@ github: <a class="reference external" href="https://skipsing.github.io/skipsdesi
 date: 29.04.23</p></li>
 </ul>
 <hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="losning-kn-kurver">
+<h1>Løsning KN kurver<a class="headerlink" href="#losning-kn-kurver" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -398,7 +397,7 @@ date: 29.04.23</p></li>
 </div>
 </div>
 </div>
-<p>Vi skal finne KN-verdiene for fartøyets krengevinkler ved <span class="math notranslate nohighlight">\(\nabla = 10000[tonn]\)</span>.Med visuell avlesning av kurvene så finner vi <em>omtrentlige</em> verdier. Avlesningene samler vi i en  <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html"><strong>pandas DataFrame</strong></a> der hvert avlesning har formatet <span class="math notranslate nohighlight">\( \text{( krengevinkel , avlest KN )} \)</span></p>
+<p>Vi skal finne KN-verdiene for fartøyets krengevinkler ved <span class="math notranslate nohighlight">\(\nabla = 10000[tonn]\)</span>. Med visuell avlesning av kurvene så finner vi <em>omtrentlige</em> verdier. Avlesningene samler vi i en  <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html"><strong>DataFrame</strong></a> der hver avlesning har formatet <span class="math notranslate nohighlight">\( \text{( krengevinkel , avlest KN )} \)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stab_data</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="p">,</span> 
@@ -483,10 +482,10 @@ date: 29.04.23</p></li>
 </table>
 </div></div></div>
 </div>
-<p>I oppgaven er vi ute etter GZ-verdien. Den finnes ved å benytte den geometriske relasjonen mellom GZ gitt av:
+<p>I oppgaven er vi ute etter GZ-verdien. Den kan finnes ved å benytte geometrisk relasjonen mellom GZ gitt av:
 $<span class="math notranslate nohighlight">\( \text{GZ = KN - KG sin(} \phi\text{)} \)</span>$</p>
 <p><img alt="image.png" src="exercises/attachment:image.png" /></p>
-<p>Vi etablerer en ny <em>kolonne</em> med navn <strong>gz</strong> og beregner verdiene ut fra formelen over.</p>
+<p>Vi etablerer en ny <em>kolonne</em> i dataframen med navn <strong>gz</strong> og beregner verdiene ut fra formelen over.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kg</span> <span class="o">=</span> <span class="mf">6.25</span> <span class="c1">#[m] Gitt i oppgaven</span>
@@ -658,7 +657,7 @@ Vi kan få denne informasjonen ut av direkte ut av datarammen:</p>
 </div></div></div>
 </div>
 <section id="metasenterets-endring-ved-krenging">
-<h1>Metasenterets endring ved krenging<a class="headerlink" href="#metasenterets-endring-ved-krenging" title="Permalink to this heading">#</a></h1>
+<h2>Metasenterets endring ved krenging<a class="headerlink" href="#metasenterets-endring-ved-krenging" title="Permalink to this heading">#</a></h2>
 <p>Vi skal nå finne hvor mye <em>metasenteret</em> endrer seg under krenging. Vi har at initialavstanden mellom <span class="math notranslate nohighlight">\(K\)</span> og <span class="math notranslate nohighlight">\(M_0\)</span> er gitt ved
 $<span class="math notranslate nohighlight">\( KM_0 = KG + GM_0\)</span>$</p>
 <div class="cell docutils container">
@@ -688,7 +687,7 @@ $<span class="math notranslate nohighlight">\( KM_0 = KG + GM_0\)</span>$</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>km_40 = 7.000757220871856[m]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\larsenyg\AppData\Local\Temp\ipykernel_18992\3984295665.py:1: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\larsenyg\AppData\Local\Temp\ipykernel_3988\3984295665.py:1: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
   kn_40 = float(max_gz[&#39;kn&#39;]) #fra datarammen. Bruker float() for å fjerne formatering
 </pre></div>
 </div>
@@ -711,7 +710,7 @@ $<span class="math notranslate nohighlight">\( M_0M_{40} = KM_{40} - KM_{0} \)</
 </div>
 </section>
 <section id="klasseselskaps-krav-til-areal-under-gz-kurve">
-<h1>Klasseselskaps krav til areal under GZ-kurve<a class="headerlink" href="#klasseselskaps-krav-til-areal-under-gz-kurve" title="Permalink to this heading">#</a></h1>
+<h2>Klasseselskaps krav til areal under GZ-kurve<a class="headerlink" href="#klasseselskaps-krav-til-areal-under-gz-kurve" title="Permalink to this heading">#</a></h2>
 <p>I oppgaven så er det listet 6 punkter som skal være tilfredstilt for at DNV (klasseselskap) skal kunne godkjenne fartøyet. Vi ser først på de 3 første med krav til areal under GZ-kurven:</p>
 <ul class="simple">
 <li><p>Areal under GZ-kurven mellom 0-30 grader uttrykt ved <span class="math notranslate nohighlight">\(A_{GZ_{0-30}} &lt; 0.055[mrad]\)</span></p></li>
@@ -728,6 +727,7 @@ $<span class="math notranslate nohighlight">\( M_0M_{40} = KM_{40} - KM_{0} \)</
 <ul class="simple">
 <li><p>Areal under GZ-kurven mellom 0-30 grader uttrykt ved <span class="math notranslate nohighlight">\(A_{GZ_{0-30}} &lt; 0.055[mrad]\)</span></p></li>
 </ul>
+<a class="reference internal image-reference" href="../_images/krenging-30-grader.png"><img alt="../_images/krenging-30-grader.png" src="../_images/krenging-30-grader.png" style="width: 400px; height: 400px;" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy</span>
@@ -752,14 +752,10 @@ $<span class="math notranslate nohighlight">\( M_0M_{40} = KM_{40} - KM_{0} \)</
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">scipy</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">simpson</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">trapz</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Areal ved trapesmetoden = 0.09330 [mrad]
+Areal ved Simpsonmetoden = 0.09289 [mrad]
+Differansen mellom trapes og Simpson: 0.44 %
+Arealet under GZ-kurven mellom 0 og 30 grader er OK ihht DNV kravet
 </pre></div>
 </div>
 </div>
@@ -767,6 +763,7 @@ $<span class="math notranslate nohighlight">\( M_0M_{40} = KM_{40} - KM_{0} \)</
 <ul class="simple">
 <li><p>Areal under GZ-kurven mellom 0-40 grader uttrykt ved <span class="math notranslate nohighlight">\(A_{GZ_{0-40}} &lt; 0.09[mrad]\)</span></p></li>
 </ul>
+<a class="reference internal image-reference" href="../_images/krenging-40-grader.png"><img alt="../_images/krenging-40-grader.png" src="../_images/krenging-40-grader.png" style="width: 400px; height: 400px;" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beregner arealet under kurven ved bruk av trapesmetoden.</span>
@@ -798,6 +795,7 @@ Arealet under GZ-kurven mellom 0 og 40 grader er OK ihht DNV kravet
 <ul class="simple">
 <li><p>Areal under GZ-kurven mellom 30-40 grader uttrykt ved <span class="math notranslate nohighlight">\(A_{GZ_{30-40}} &lt; 0.03[mrad]\)</span></p></li>
 </ul>
+<a class="reference internal image-reference" href="../_images/krenging-30-40-grader.png"><img alt="../_images/krenging-30-40-grader.png" src="../_images/krenging-30-40-grader.png" style="width: 400px; height: 400px;" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beregner arealet under kurven ved bruk av trapesmetoden.</span>
@@ -828,62 +826,15 @@ Arealet under GZ-kurven mellom 30 og 40 grader er OK ihht DNV kravet
 </div>
 </section>
 <section id="krav-til-rettende-arm">
-<h1>Krav til rettende arm<a class="headerlink" href="#krav-til-rettende-arm" title="Permalink to this heading">#</a></h1>
+<h2>Krav til rettende arm<a class="headerlink" href="#krav-til-rettende-arm" title="Permalink to this heading">#</a></h2>
 <p>Kravet til “rettende arm” (GZ verdi ved 30 grader)</p>
 <ul class="simple">
 <li><p>Den rettende arm (GZ) <span class="math notranslate nohighlight">\(GZ_{30} &gt;= 0.2[m]\)</span></p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test</span><span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">interpolate</span><span class="o">.</span><span class="n">interp1d</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span>  <span class="n">stab_data</span><span class="o">.</span><span class="n">gz</span><span class="p">,</span> <span class="n">stab_data</span><span class="o">.</span><span class="n">vinkel</span>     <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">test</span><span class="p">))</span>
-
-
-
-<span class="n">stab_data</span><span class="o">.</span><span class="n">gz</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_17024</span>\<span class="mf">2505806323.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">test</span><span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">interpolate</span><span class="o">.</span><span class="n">interp1d</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span>  <span class="n">stab_data</span><span class="o">.</span><span class="n">gz</span><span class="p">,</span> <span class="n">stab_data</span><span class="o">.</span><span class="n">vinkel</span>     <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">test</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-
-<span class="nn">c:\Users\larsenyg\Anaconda3\lib\site-packages\scipy\interpolate\_interpolate.py</span> in <span class="ni">__init__</span><span class="nt">(self, x, y, kind, axis, copy, bounds_error, fill_value, assume_sorted)</span>
-<span class="g g-Whitespace">    </span><span class="mi">444</span>                  <span class="n">assume_sorted</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">445</span>         <span class="sd">&quot;&quot;&quot; Initialize a 1-D linear interpolation class.&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">446</span>         <span class="n">_Interpolator1D</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">447</span> 
-<span class="g g-Whitespace">    </span><span class="mi">448</span>         <span class="bp">self</span><span class="o">.</span><span class="n">bounds_error</span> <span class="o">=</span> <span class="n">bounds_error</span>  <span class="c1"># used by fill_value setter</span>
-
-<span class="nn">c:\Users\larsenyg\Anaconda3\lib\site-packages\scipy\interpolate\_polyint.py</span> in <span class="ni">__init__</span><span class="nt">(self, xi, yi, axis)</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span>         <span class="k">if</span> <span class="n">yi</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">54</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_set_yi</span><span class="p">(</span><span class="n">yi</span><span class="p">,</span> <span class="n">xi</span><span class="o">=</span><span class="n">xi</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> 
-<span class="g g-Whitespace">     </span><span class="mi">56</span>     <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-
-<span class="nn">c:\Users\larsenyg\Anaconda3\lib\site-packages\scipy\interpolate\_polyint.py</span> in <span class="ni">_set_yi</span><span class="nt">(self, yi, xi, axis)</span>
-<span class="g g-Whitespace">    </span><span class="mi">121</span>         <span class="k">if</span> <span class="n">shape</span> <span class="o">==</span> <span class="p">():</span>
-<span class="g g-Whitespace">    </span><span class="mi">122</span>             <span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span>
-<span class="ne">--&gt; </span><span class="mi">123</span>         <span class="k">if</span> <span class="n">xi</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">shape</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">xi</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">124</span>             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;x and y arrays must be equal in length along &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">125</span>                              <span class="s2">&quot;interpolation axis.&quot;</span><span class="p">)</span>
-
-<span class="ne">TypeError</span>: object of type &#39;float&#39; has no len()
-</pre></div>
-</div>
-</div>
-</div>
+<a class="reference internal image-reference" href="../_images/rettende-arm.png"><img alt="../_images/rettende-arm.png" src="../_images/rettende-arm.png" style="width: 400px; height: 400px;" /></a>
 </section>
 <section id="forklarende-plot-brukt-i-losningsforslaget">
-<h1>Forklarende plot brukt i løsningsforslaget<a class="headerlink" href="#forklarende-plot-brukt-i-losningsforslaget" title="Permalink to this heading">#</a></h1>
+<h2>Forklarende plot brukt i løsningsforslaget<a class="headerlink" href="#forklarende-plot-brukt-i-losningsforslaget" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Skisse for area under kurve 30 grader </span>
@@ -957,34 +908,7 @@ Arealet under GZ-kurven mellom 30 og 40 grader er OK ihht DNV kravet
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>dir
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Volume in drive C is OSDisk
- Volume Serial Number is FCEF-E3D7
-
- Directory of c:\Users\larsenyg\repos\skipsdesign1\exercises
-
-30.04.2023  13:57    &lt;DIR&gt;          .
-30.04.2023  13:57    &lt;DIR&gt;          ..
-30.04.2023  13:58            31�767 30grader.png
-30.04.2023  13:35            33�070 krenging-30-40-grader.png
-30.04.2023  13:58            32�559 krenging-30-grader.png
-30.04.2023  13:35            32�477 krenging-40-grader.png
-30.04.2023  13:56            31�767 rettende-arm-30grader.png
-30.04.2023  13:57            31�767 rettende-arm.png
-29.04.2023  10:27            41�672 stabilitet_store_krengevinkler.ipynb
-29.04.2023  08:46               161 test.md
-               8 File(s)        235�240 bytes
-               2 Dir(s)  404�630�732�800 bytes free
-</pre></div>
-</div>
-</div>
-</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1054,12 +978,11 @@ Arealet under GZ-kurven mellom 30 og 40 grader er OK ihht DNV kravet
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Metasenterets endring ved krenging</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasseselskaps-krav-til-areal-under-gz-kurve">Klasseselskaps krav til areal under GZ-kurve</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#krav-til-rettende-arm">Krav til rettende arm</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#forklarende-plot-brukt-i-losningsforslaget">Forklarende plot brukt i løsningsforslaget</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metasenterets-endring-ved-krenging">Metasenterets endring ved krenging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klasseselskaps-krav-til-areal-under-gz-kurve">Klasseselskaps krav til areal under GZ-kurve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krav-til-rettende-arm">Krav til rettende arm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forklarende-plot-brukt-i-losningsforslaget">Forklarende plot brukt i løsningsforslaget</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
