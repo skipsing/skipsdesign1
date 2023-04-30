@@ -8,6 +8,8 @@ github: https://skipsing.github.io/skipsdesign1/
 date: 29.04.23
 ---
 # Admonitions 
+
+## Litt flere admnitions 
 ```{admonition} Dette er en Notis
 :class: note
 
