@@ -17,20 +17,33 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import math
-import pandas
-import numpy as np 
-import matplotlib.pyplot as plt
+import scipy
+from scipy.integrate import simpson
+from numpy import trapz
+
+# Beregner arealet udner kurven ved bruk av trapesmetoden.
+area1_30 = trapz( stab_data['gz'][0:4] , dx= np.radians(10))
+print("Areal ved trapesmetoden =", "%.5f" % area1_30 , '[mrad]')
+
+# Beregner arealet udner kurven ved bruk av Simpsonmetoden.
+area2_30 = simpson(stab_data['gz'][0:4] , dx = np.radians(10))
+print("Areal ved Simpsonmetoden =", "%.5f" % area2_30 , '[mrad]')
+diff_30 = (area1_30 -area2_30)/ area1_30 * 100 
+print('Differansen mellom trapes og Simpson:', "%.2f" % diff_30   , '%')
+dnv_30 = 0.055
+if min(area1_30, area2_30) >= dnv_30:
+    print('Arealet under GZ-kurven mellom 0 og 30 grader er OK ihht DNV kravet') 
+else:
+    print('Arealet under GZ-kurven mellom 0 og 30 grader er IKKE OK ihht DNV kravet')
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [1;32mIn [1], line 2[0m
-[0;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mmath[39;00m
-[1;32m----> 2[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m
-[0;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m 
-[0;32m      4[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+Cell [1;32mIn [11], line 1[0m
+[1;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mscipy[39;00m
+[0;32m      2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mscipy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mintegrate[39;00m [38;5;28;01mimport[39;00m simpson
+[0;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mimport[39;00m trapz
 
-[1;31mModuleNotFoundError[0m: No module named 'pandas'
-ModuleNotFoundError: No module named 'pandas'
+[1;31mModuleNotFoundError[0m: No module named 'scipy'
+ModuleNotFoundError: No module named 'scipy'
 
