@@ -8,5 +8,5 @@ chapters:
 - file: terminologi 
 - file: hoveddimensjoner
 - file: teknisk_tegning
-- file: notebooks
+- file: exercises/stabilitet_store_krengevinkler
 - file: markdown-notebooks
