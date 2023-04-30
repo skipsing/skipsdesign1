@@ -59,8 +59,7 @@ Alle emneevalueringer skal inneholde en studentevaluering, og som normalt er bas
 
 Det vil bli holdt 2-3 møter iløpet av semesteret. 
 
-![](//images/ntnu_kvalitetsikringsystem.png)
-
+<img src='../images/ntnu_kvalitetsikringsystem.png' width=”400” height='400' >
 
 ### Referansegruppe 
 
