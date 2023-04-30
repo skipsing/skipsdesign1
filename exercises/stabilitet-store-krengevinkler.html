@@ -161,7 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../emneinfo.html">Emneinfo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../terminologi.html">Terminologi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/hoveddimensjoner.html">:straight_ruler: Hoveddimensjoner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/hoveddimensjoner.html">📏 Hoveddimensjoner</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../teknisk_tegning.html">Teknisk tegning</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Løsning KN kurver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../admonition.html">Admonitions</a></li>
@@ -375,19 +375,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <hr class="docutils" />
-<p>title: Stabilitet ved store krengevinkler
-description: Bruk av et KN-kurver til å etablere GZ-kurve for et gitt deplasement og KG.
-Analyse av GZ-kurve mhp DNV stabilitetskriterier.
-authors:</p>
-<ul class="simple">
-<li><p>name: Lars Erik Nygård
-email: <a class="reference external" href="mailto:lars&#46;e&#46;nygard&#37;&#52;&#48;ntnu&#46;no">lars<span>&#46;</span>e<span>&#46;</span>nygard<span>&#64;</span>ntnu<span>&#46;</span>no</a>
-github: <a class="reference external" href="https://skipsing.github.io/skipsdesign1/">https://skipsing.github.io/skipsdesign1/</a>
-date: 29.04.23</p></li>
-</ul>
-<hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="losning-kn-kurver">
+  <section class="tex2jax_ignore mathjax_ignore" id="losning-kn-kurver">
 <h1>Løsning KN kurver<a class="headerlink" href="#losning-kn-kurver" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -487,7 +475,7 @@ date: 29.04.23</p></li>
 <p>I oppgaven er vi ute etter GZ-verdien. Den kan finnes ved å benytte geometrisk relasjonen mellom GZ gitt av:</p>
 <div class="math notranslate nohighlight">
 \[ \text{GZ = KN - KG sin(} \phi\text{)} \]</div>
-<p><img alt="image.png" src="exercises/attachment:image.png" /></p>
+<a class="reference internal image-reference" href="../_images/kn-km-relasjon.png"><img alt="../_images/kn-km-relasjon.png" src="../_images/kn-km-relasjon.png" style="width: 550px; height: 400px;" /></a>
 <p>Vi etablerer en ny <em>kolonne</em> i dataframen med navn <strong>gz</strong> og beregner verdiene ut fra formelen over.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -690,7 +678,7 @@ $<span class="math notranslate nohighlight">\( KM_0 = KG + GM_0\)</span>$</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>km_40 = 7.000757220871856[m]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\larsenyg\AppData\Local\Temp\ipykernel_12620\3984295665.py:1: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\larsenyg\AppData\Local\Temp\ipykernel_6868\3984295665.py:1: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
   kn_40 = float(max_gz[&#39;kn&#39;]) #fra datarammen. Bruker float() for å fjerne formatering
 </pre></div>
 </div>
@@ -765,7 +753,7 @@ Arealet under GZ-kurven mellom 0 og 30 grader er OK ihht DNV kravet
 <ul class="simple">
 <li><p>Areal under GZ-kurven mellom 0-40 grader uttrykt ved <span class="math notranslate nohighlight">\(A_{GZ_{0-40}} &lt; 0.09[mrad]\)</span></p></li>
 </ul>
-<a class="reference internal image-reference" href="../_images/krenging-40-grader.png"><img alt="../_images/krenging-40-grader.png" src="../_images/krenging-40-grader.png" style="width: 400px; height: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/krenging-40-grader.png"><img alt="../_images/krenging-40-grader.png" src="../_images/krenging-40-grader.png" style="width: 550px; height: 400px;" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beregner arealet under kurven ved bruk av trapesmetoden.</span>
@@ -797,7 +785,7 @@ Arealet under GZ-kurven mellom 0 og 40 grader er OK ihht DNV kravet
 <ul class="simple">
 <li><p>Areal under GZ-kurven mellom 30-40 grader uttrykt ved <span class="math notranslate nohighlight">\(A_{GZ_{30-40}} &lt; 0.03[mrad]\)</span></p></li>
 </ul>
-<a class="reference internal image-reference" href="../_images/krenging-30-40-grader.png"><img alt="../_images/krenging-30-40-grader.png" src="../_images/krenging-30-40-grader.png" style="width: 400px; height: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/krenging-30-40-grader.png"><img alt="../_images/krenging-30-40-grader.png" src="../_images/krenging-30-40-grader.png" style="width: 550px; height: 400px;" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beregner arealet under kurven ved bruk av trapesmetoden.</span>
@@ -833,7 +821,7 @@ Arealet under GZ-kurven mellom 30 og 40 grader er OK ihht DNV kravet
 <ul class="simple">
 <li><p>Den rettende arm (GZ) <span class="math notranslate nohighlight">\(GZ_{30} &gt;= 0.2[m]\)</span></p></li>
 </ul>
-<a class="reference internal image-reference" href="../_images/rettende-arm.png"><img alt="../_images/rettende-arm.png" src="../_images/rettende-arm.png" style="width: 400px; height: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/rettende-arm.png"><img alt="../_images/rettende-arm.png" src="../_images/rettende-arm.png" style="width: 550px; height: 400px;" /></a>
 </section>
 <section id="forklarende-plot-brukt-i-losningsforslaget">
 <h3>Forklarende plot brukt i løsningsforslaget<a class="headerlink" href="#forklarende-plot-brukt-i-losningsforslaget" title="Permalink to this heading">#</a></h3>
