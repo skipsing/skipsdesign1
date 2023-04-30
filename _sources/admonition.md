@@ -7,7 +7,7 @@ authors:
 github: https://skipsing.github.io/skipsdesign1/
 date: 29.04.23
 ---
-
+# Admonitions 
 ```{admonition} Dette er en Notis
 :class: note
 
