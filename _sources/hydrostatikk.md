@@ -22,5 +22,18 @@ $ \text{Skipets vekt} =  \text{Vekten av vannet som skipet fortrenger}$
 
 
 
+```{admonition} Hydrostatisk trykk
+:class: tip
 
+Det hydrostatiske trykket i en væske er avhengig av neddykningen og tettheten til væsken.  
+Trykket benevnes $p_s$, og beregnes etter følgende ligning: 
+
+$$ p_s = \rho \times g \times z $$
+
+hvor; 
+$$ \rho = \text{Tetthet til væsken (sjøvann er }1025 \frac{kg}{m^3}) $$
+$$ \text{g = Gravitasjonskonstant }(9.81 \frac{m}{s2} ) $$
+$$ \text{z = dybden trykket måles på, målt fra overflaten} $$
+
+```
 
