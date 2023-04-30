@@ -1,0 +1,1102 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Metasenterets endring ved krenging &#8212; Skipsdesign I</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'exercises/stabilitet_store_krengevinkler';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Notebooks with MyST Markdown" href="../markdown-notebooks.html" />
+    <link rel="prev" title="Teknisk tegning" href="../teknisk_tegning.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/skipsing_bilde.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/skipsing_bilde.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Skipsdesign I - Hydrostatikk og stabilitet
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../emneinfo.html">Emneinfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../terminologi.html">Terminologi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teknisk_tegning.html">Teknisk tegning</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Metasenterets endring ved krenging</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/skipsing/skipsdesign1" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/skipsing/skipsdesign1/issues/new?title=Issue%20on%20page%20%2Fexercises/stabilitet_store_krengevinkler.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/exercises/stabilitet_store_krengevinkler.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Metasenterets endring ved krenging</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Metasenterets endring ved krenging</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasseselskaps-krav-til-areal-under-gz-kurve">Klasseselskaps krav til areal under GZ-kurve</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#krav-til-rettende-arm">Krav til rettende arm</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#forklarende-plot-brukt-i-losningsforslaget">Forklarende plot brukt i løsningsforslaget</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <hr class="docutils" />
+<p>title: Stabilitet ved store krengevinkler
+description: Bruk av et KN-kurver til å etablere GZ-kurve for et gitt deplasement og KG.
+Analyse av GZ-kurve mhp DNV stabilitetskriterier.
+authors:</p>
+<ul class="simple">
+<li><p>name: Lars Erik Nygård
+email: <a class="reference external" href="mailto:lars&#46;e&#46;nygard&#37;&#52;&#48;ntnu&#46;no">lars<span>&#46;</span>e<span>&#46;</span>nygard<span>&#64;</span>ntnu<span>&#46;</span>no</a>
+github: <a class="reference external" href="https://skipsing.github.io/skipsdesign1/">https://skipsing.github.io/skipsdesign1/</a>
+date: 29.04.23</p></li>
+</ul>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">math</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vi skal finne KN-verdiene for fartøyets krengevinkler ved <span class="math notranslate nohighlight">\(\nabla = 10000[tonn]\)</span>.Med visuell avlesning av kurvene så finner vi <em>omtrentlige</em> verdier. Avlesningene samler vi i en  <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html"><strong>pandas DataFrame</strong></a> der hvert avlesning har formatet <span class="math notranslate nohighlight">\( \text{( krengevinkel , avlest KN )} \)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stab_data</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="p">,</span> 
+                               <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mf">1.17</span><span class="p">)</span> <span class="p">,</span> 
+                               <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mf">2.4</span><span class="p">)</span> <span class="p">,</span> 
+                               <span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mf">3.5</span><span class="p">)</span> <span class="p">,</span> 
+                               <span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mf">4.5</span><span class="p">)</span> <span class="p">,</span> 
+                               <span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mf">5.1</span><span class="p">)</span> <span class="p">,</span> 
+                               <span class="p">(</span><span class="mi">60</span><span class="p">,</span><span class="mf">5.5</span><span class="p">)</span> <span class="p">,</span> 
+                               <span class="p">(</span><span class="mi">70</span><span class="p">,</span><span class="mf">5.7</span><span class="p">)</span> <span class="p">],</span> 
+                               <span class="n">columns</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;vinkel&#39;</span><span class="p">,</span> <span class="s1">&#39;kn&#39;</span><span class="p">]</span> <span class="p">)</span>
+
+<span class="n">stab_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>vinkel</th>
+      <th>kn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10</td>
+      <td>1.17</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>20</td>
+      <td>2.40</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>30</td>
+      <td>3.50</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>40</td>
+      <td>4.50</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>50</td>
+      <td>5.10</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>60</td>
+      <td>5.50</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>70</td>
+      <td>5.70</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>I oppgaven er vi ute etter GZ-verdien. Den finnes ved å benytte den geometriske relasjonen mellom GZ gitt av:
+$<span class="math notranslate nohighlight">\( \text{GZ = KN - KG sin(} \phi\text{)} \)</span>$</p>
+<p><img alt="image.png" src="exercises/attachment:image.png" /></p>
+<p>Vi etablerer en ny <em>kolonne</em> med navn <strong>gz</strong> og beregner verdiene ut fra formelen over.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kg</span> <span class="o">=</span> <span class="mf">6.25</span> <span class="c1">#[m] Gitt i oppgaven</span>
+<span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;gz&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;kn&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">kg</span> <span class="o">*</span>  <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;vinkel&#39;</span><span class="p">]))</span> 
+<span class="n">stab_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>vinkel</th>
+      <th>kn</th>
+      <th>gz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10</td>
+      <td>1.17</td>
+      <td>0.084699</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>20</td>
+      <td>2.40</td>
+      <td>0.262374</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>30</td>
+      <td>3.50</td>
+      <td>0.375000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>40</td>
+      <td>4.50</td>
+      <td>0.482577</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>50</td>
+      <td>5.10</td>
+      <td>0.312222</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>60</td>
+      <td>5.50</td>
+      <td>0.087341</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>70</td>
+      <td>5.70</td>
+      <td>-0.173079</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Vi sier oss nå fornøyd med datamaterialet og går over på å behandle og presentere materialet vi har samlet. Matplotlib gjør presentasjonsjobben utmerket direkte ut av datarammen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stab_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span> <span class="s1">&#39;vinkel&#39;</span> <span class="p">,</span> <span class="s1">&#39;gz&#39;</span> <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/70dd27a2ee83d7f6920a6fb3eab52cfb126e0b1adaca6f6a769318fad5a82dc0.png" src="../_images/70dd27a2ee83d7f6920a6fb3eab52cfb126e0b1adaca6f6a769318fad5a82dc0.png" />
+</div>
+</div>
+<p>Plottet viser GZ-verdien som funksjon av krengevinkel. Vi gjør plottet litt mere presentabelt ved å beskrive hva vi faktisk ser, og gir en god beskrivelse av hva de ulike aksene representerer:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stab_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span> <span class="s1">&#39;vinkel&#39;</span> <span class="p">,</span> <span class="s1">&#39;gz&#39;</span> <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Krengevinkel [deg]&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;GZ-verdi [m]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;GZ-kurve @ KG=&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">kg</span><span class="p">)</span> <span class="o">+</span><span class="s1">&#39;[m], Depl = 10000[tonn]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/9f512889947d102c430f161aae5fe432b0d643303ac4e37603b89e294c0d4ce0.png" src="../_images/9f512889947d102c430f161aae5fe432b0d643303ac4e37603b89e294c0d4ce0.png" />
+</div>
+</div>
+<p>Grafisk så kan man se at maksimal GZ verdi oppstår ved krengevinkel 40 grader.
+Vi kan få denne informasjonen ut av direkte ut av datarammen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;gz&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.48257743945912956
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>(Avansert)</strong> Tilhørende vinkel og KN-verdi finnes ved å sette radverdien til <em>GZ</em> lik maksimalverdien</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">max_gz</span> <span class="o">=</span> <span class="n">stab_data</span><span class="p">[</span><span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;gz&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;gz&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()]</span>
+<span class="n">max_gz</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>vinkel</th>
+      <th>kn</th>
+      <th>gz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4</th>
+      <td>40</td>
+      <td>4.5</td>
+      <td>0.482577</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="metasenterets-endring-ved-krenging">
+<h1>Metasenterets endring ved krenging<a class="headerlink" href="#metasenterets-endring-ved-krenging" title="Permalink to this heading">#</a></h1>
+<p>Vi skal nå finne hvor mye <em>metasenteret</em> endrer seg under krenging. Vi har at initialavstanden mellom <span class="math notranslate nohighlight">\(K\)</span> og <span class="math notranslate nohighlight">\(M_0\)</span> er gitt ved
+$<span class="math notranslate nohighlight">\( KM_0 = KG + GM_0\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm_0</span> <span class="o">=</span> <span class="mf">0.305</span> <span class="c1">#[m], gitt som opplysning i oppgaven </span>
+<span class="n">km_0</span> <span class="o">=</span> <span class="n">kg</span> <span class="o">+</span> <span class="n">gm_0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;km_0 = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">km_0</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;[m]&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>km_0 = 6.555[m]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Videre kan vi finne ny KM verdi ved krenging 40grader ut fra den geometriske relasjonen <span class="math notranslate nohighlight">\(KM_{40} = KN_{40} \times \sin(40)\)</span>, og der vi allerede har fått <span class="math notranslate nohighlight">\(KN_{40}\)</span> ut fra avlesning av KN-kurven.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kn_40</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">max_gz</span><span class="p">[</span><span class="s1">&#39;kn&#39;</span><span class="p">])</span> <span class="c1">#fra datarammen. Bruker float() for å fjerne formatering  </span>
+<span class="n">km_40</span> <span class="o">=</span> <span class="n">kn_40</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">40</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;km_40 = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">km_40</span><span class="p">)</span>  <span class="o">+</span> <span class="s1">&#39;[m]&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>km_40 = 7.000757220871856[m]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Differansen i KM gir oss da endring av metasenteret:<br />
+$<span class="math notranslate nohighlight">\( M_0M_{40} = KM_{40} - KM_{0} \)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m0_m40</span> <span class="o">=</span> <span class="n">km_40</span> <span class="o">-</span> <span class="n">km_0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Metasenterets endring mellom initialposisjon og 40grader krenging er=&#39;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">%.3f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">m0_m40</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;[m]&#39;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metasenterets endring mellom initialposisjon og 40grader krenging er=0.446[m]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="klasseselskaps-krav-til-areal-under-gz-kurve">
+<h1>Klasseselskaps krav til areal under GZ-kurve<a class="headerlink" href="#klasseselskaps-krav-til-areal-under-gz-kurve" title="Permalink to this heading">#</a></h1>
+<p>I oppgaven så er det listet 6 punkter som skal være tilfredstilt for at DNV (klasseselskap) skal kunne godkjenne fartøyet. Vi ser først på de 3 første med krav til areal under GZ-kurven:</p>
+<ul class="simple">
+<li><p>Areal under GZ-kurven mellom 0-30 grader uttrykt ved <span class="math notranslate nohighlight">\(A_{GZ_{0-30}} &lt; 0.055[mrad]\)</span></p></li>
+<li><p>Areal under GZ-kurven mellom 0-40 grader uttrykt ved <span class="math notranslate nohighlight">\(A_{GZ_{0-40}} &lt; 0.09[mrad]\)</span></p></li>
+<li><p>Areal under GZ-kurven mellom 30-40 grader uttrykt ved <span class="math notranslate nohighlight">\(A_{GZ_{30-40}} &lt; 0.03[mrad]\)</span></p></li>
+</ul>
+<p>Dette kan for enkle kurver som denne regnes manuelt ved å stykke opp arealet i mindre deler bestående av trekanter og rektangler for så å summere de sammen. NB! På x-aksen så er det nå gitt som grader, og det må da regnes om til radianer før en går igang.</p>
+<p>Arealet under en kurve kan bestemmes ved integrasjon <span class="math notranslate nohighlight">\( \int_{a}^{b} f(x) \,dx\)</span>, men det fordrer at man vet <span class="math notranslate nohighlight">\(f(x)\)</span> som beskriver kurven. I mangel av dette finnes det et par numeriske metoder som løser dette problemet ved kun å vite noen punkter langs kurven:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://no.wikipedia.org/wiki/Trapesintegrasjon">Trapesmetoden</a></p></li>
+<li><p><a class="reference external" href="https://no.wikipedia.org/wiki/Simpson-integrasjon">Simpsonmetoden</a></p></li>
+</ul>
+<p>Vi går ikke noe nærmere inn på de bortsett fra at vi kan regne på avviket mellom de to. Disse metodene finnes i standardbiblioteket til Python i henholdsvis Scipy og Numpy.</p>
+<ul class="simple">
+<li><p>Areal under GZ-kurven mellom 0-30 grader uttrykt ved <span class="math notranslate nohighlight">\(A_{GZ_{0-30}} &lt; 0.055[mrad]\)</span></p></li>
+</ul>
+<img src='./krenging-30-grader.png' width=”400” height='400' ><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">simpson</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">trapz</span>
+
+<span class="c1"># Beregner arealet udner kurven ved bruk av trapesmetoden.</span>
+<span class="n">area1_30</span> <span class="o">=</span> <span class="n">trapz</span><span class="p">(</span> <span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;gz&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="p">,</span> <span class="n">dx</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Areal ved trapesmetoden =&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%.5f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">area1_30</span> <span class="p">,</span> <span class="s1">&#39;[mrad]&#39;</span><span class="p">)</span>
+
+<span class="c1"># Beregner arealet udner kurven ved bruk av Simpsonmetoden.</span>
+<span class="n">area2_30</span> <span class="o">=</span> <span class="n">simpson</span><span class="p">(</span><span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;gz&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="p">,</span> <span class="n">dx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Areal ved Simpsonmetoden =&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%.5f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">area2_30</span> <span class="p">,</span> <span class="s1">&#39;[mrad]&#39;</span><span class="p">)</span>
+<span class="n">diff_30</span> <span class="o">=</span> <span class="p">(</span><span class="n">area1_30</span> <span class="o">-</span><span class="n">area2_30</span><span class="p">)</span><span class="o">/</span> <span class="n">area1_30</span> <span class="o">*</span> <span class="mi">100</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Differansen mellom trapes og Simpson:&#39;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">diff_30</span>   <span class="p">,</span> <span class="s1">&#39;%&#39;</span><span class="p">)</span>
+<span class="n">dnv_30</span> <span class="o">=</span> <span class="mf">0.055</span>
+<span class="k">if</span> <span class="nb">min</span><span class="p">(</span><span class="n">area1_30</span><span class="p">,</span> <span class="n">area2_30</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">dnv_30</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Arealet under GZ-kurven mellom 0 og 30 grader er OK ihht DNV kravet&#39;</span><span class="p">)</span> 
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Arealet under GZ-kurven mellom 0 og 30 grader er IKKE OK ihht DNV kravet&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Areal ved trapesmetoden = 0.09330 [mrad]
+Areal ved Simpsonmetoden = 0.09289 [mrad]
+Differansen mellom trapes og Simpson: 0.44 %
+Arealet under GZ-kurven mellom 0 og 30 grader er OK ihht DNV kravet
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Areal under GZ-kurven mellom 0-40 grader uttrykt ved <span class="math notranslate nohighlight">\(A_{GZ_{0-40}} &lt; 0.09[mrad]\)</span></p></li>
+</ul>
+<img src='./krenging-40-grader.png' width=”400” height='400' ><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beregner arealet under kurven ved bruk av trapesmetoden.</span>
+<span class="n">area1_40</span> <span class="o">=</span> <span class="n">trapz</span><span class="p">(</span> <span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;gz&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="p">,</span> <span class="n">dx</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Areal ved trapesmetoden =&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%.5f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">area1_40</span> <span class="p">,</span> <span class="s1">&#39;[mrad]&#39;</span><span class="p">)</span>
+
+<span class="c1"># Beregner arealet udner kurven ved bruk av Simpsonmetoden.</span>
+<span class="n">area2_40</span> <span class="o">=</span> <span class="n">simpson</span><span class="p">(</span><span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;gz&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="p">,</span> <span class="n">dx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Areal ved Simpsonmetoden =&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%.5f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">area2_40</span> <span class="p">,</span> <span class="s1">&#39;[mrad]&#39;</span><span class="p">)</span>
+<span class="n">diff</span> <span class="o">=</span> <span class="p">(</span><span class="n">area1_40</span> <span class="o">-</span><span class="n">area2_40</span><span class="p">)</span><span class="o">/</span> <span class="n">area1_40</span> <span class="o">*</span> <span class="mi">100</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Differansen mellom trapes og Simpson:&#39;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">diff</span>   <span class="p">,</span> <span class="s1">&#39;%&#39;</span><span class="p">)</span>
+<span class="n">dnv_40</span> <span class="o">=</span> <span class="mf">0.09</span>
+<span class="k">if</span> <span class="nb">min</span><span class="p">(</span><span class="n">area1_40</span><span class="p">,</span> <span class="n">area2_40</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">dnv_40</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Arealet under GZ-kurven mellom 0 og 40 grader er OK ihht DNV kravet&#39;</span><span class="p">)</span> 
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Arealet under GZ-kurven mellom 0 og 40 grader er IKKE OK ihht DNV kravet&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Areal ved trapesmetoden = 0.16814 [mrad]
+Areal ved Simpsonmetoden = 0.16558 [mrad]
+Differansen mellom trapes og Simpson: 1.52 %
+Arealet under GZ-kurven mellom 0 og 40 grader er OK ihht DNV kravet
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Areal under GZ-kurven mellom 30-40 grader uttrykt ved <span class="math notranslate nohighlight">\(A_{GZ_{30-40}} &lt; 0.03[mrad]\)</span></p></li>
+</ul>
+<img src='./krenging-30-40-grader.png' width=”400” height='400' ><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beregner arealet under kurven ved bruk av trapesmetoden.</span>
+<span class="n">area1_3040</span> <span class="o">=</span> <span class="n">trapz</span><span class="p">(</span> <span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;gz&#39;</span><span class="p">][</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="p">,</span> <span class="n">dx</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Areal ved trapesmetoden =&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%.5f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">area1_3040</span> <span class="p">,</span> <span class="s1">&#39;[mrad]&#39;</span><span class="p">)</span>
+
+<span class="c1"># Beregner arealet udner kurven ved bruk av Simpsonmetoden.</span>
+<span class="n">area2_3040</span> <span class="o">=</span> <span class="n">simpson</span><span class="p">(</span><span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;gz&#39;</span><span class="p">][</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="p">,</span> <span class="n">dx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Areal ved Simpsonmetoden =&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%.5f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">area2_3040</span> <span class="p">,</span> <span class="s1">&#39;[mrad]&#39;</span><span class="p">)</span>
+<span class="n">diff</span> <span class="o">=</span> <span class="p">(</span><span class="n">area1_3040</span> <span class="o">-</span><span class="n">area2_3040</span><span class="p">)</span><span class="o">/</span> <span class="n">area1_3040</span> <span class="o">*</span> <span class="mi">100</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Differansen mellom trapes og Simpson:&#39;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">diff</span>   <span class="p">,</span> <span class="s1">&#39;%&#39;</span><span class="p">)</span>
+<span class="n">dnv_3040</span> <span class="o">=</span> <span class="mf">0.03</span>
+<span class="k">if</span> <span class="nb">min</span><span class="p">(</span><span class="n">area1_3040</span><span class="p">,</span> <span class="n">area2_3040</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">dnv_3040</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Arealet under GZ-kurven mellom 30 og 40 grader er OK ihht DNV kravet&#39;</span><span class="p">)</span> 
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Arealet under GZ-kurven mellom 30 og 40 grader er IKKE OK ihht DNV kravet&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Areal ved trapesmetoden = 0.07484 [mrad]
+Areal ved Simpsonmetoden = 0.07484 [mrad]
+Differansen mellom trapes og Simpson: 0.00 %
+Arealet under GZ-kurven mellom 30 og 40 grader er OK ihht DNV kravet
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="krav-til-rettende-arm">
+<h1>Krav til rettende arm<a class="headerlink" href="#krav-til-rettende-arm" title="Permalink to this heading">#</a></h1>
+<p>Kravet til “rettende arm” (GZ verdi ved 30 grader)</p>
+<ul class="simple">
+<li><p>Den rettende arm (GZ) <span class="math notranslate nohighlight">\(GZ_{30} &gt;= 0.2[m]\)</span></p></li>
+</ul>
+<img src='./30grader.png' width=”400” height='400' ><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test</span><span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">interpolate</span><span class="o">.</span><span class="n">interp1d</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span>  <span class="n">stab_data</span><span class="o">.</span><span class="n">gz</span><span class="p">,</span> <span class="n">stab_data</span><span class="o">.</span><span class="n">vinkel</span>     <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">test</span><span class="p">))</span>
+
+
+
+<span class="n">stab_data</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>70.0
+4010.7045659157625
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    0.000000
+1    0.084699
+2    0.262374
+3    0.375000
+4    0.482577
+5    0.312222
+6    0.087341
+7   -0.173079
+Name: gz, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="forklarende-plot-brukt-i-losningsforslaget">
+<h1>Forklarende plot brukt i løsningsforslaget<a class="headerlink" href="#forklarende-plot-brukt-i-losningsforslaget" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Skisse for area under kurve 30 grader </span>
+
+<span class="n">stab_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span> <span class="s1">&#39;vinkel&#39;</span> <span class="p">,</span> <span class="s1">&#39;gz&#39;</span> <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Krengevinkel [deg]&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;GZ-verdi [m]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Areal under kurven ved krenging opp til 30grader&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span> <span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;vinkel&#39;</span><span class="p">]</span>    <span class="p">,</span> 
+        <span class="n">y1</span><span class="o">=</span> <span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;gz&#39;</span><span class="p">],</span> 
+        <span class="n">where</span><span class="o">=</span> <span class="p">[</span><span class="kc">True</span> <span class="p">,</span> <span class="kc">True</span> <span class="p">,</span> <span class="kc">True</span> <span class="p">,</span> <span class="kc">True</span> <span class="p">,</span> <span class="kc">False</span> <span class="p">,</span> <span class="kc">False</span> <span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span> <span class="p">]</span> <span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span>
+        <span class="n">alpha</span><span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;krenging-30-grader.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stab_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span> <span class="s1">&#39;vinkel&#39;</span> <span class="p">,</span> <span class="s1">&#39;gz&#39;</span> <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Krengevinkel [deg]&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;GZ-verdi [m]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Rettende arm &gt; 0.2[m] ved 30[deg] &#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;30grader.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stab_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span> <span class="s1">&#39;vinkel&#39;</span> <span class="p">,</span> <span class="s1">&#39;gz&#39;</span> <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Krengevinkel [deg]&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;GZ-verdi [m]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Areal under kurven ved kregning opp til 40grader&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span> <span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;vinkel&#39;</span><span class="p">]</span>    <span class="p">,</span> 
+        <span class="n">y1</span><span class="o">=</span> <span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;gz&#39;</span><span class="p">],</span> 
+        <span class="n">where</span><span class="o">=</span> <span class="p">[</span><span class="kc">True</span> <span class="p">,</span> <span class="kc">True</span> <span class="p">,</span> <span class="kc">True</span> <span class="p">,</span> <span class="kc">True</span> <span class="p">,</span> <span class="kc">True</span> <span class="p">,</span> <span class="kc">False</span> <span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span> <span class="p">]</span> <span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span>
+        <span class="n">alpha</span><span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;krenging-40-grader.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stab_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span> <span class="s1">&#39;vinkel&#39;</span> <span class="p">,</span> <span class="s1">&#39;gz&#39;</span> <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Krengevinkel [deg]&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;GZ-verdi [m]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Areal under kurven ved krenging mellom 30-40grader&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span> <span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;vinkel&#39;</span><span class="p">]</span>    <span class="p">,</span> 
+        <span class="n">y1</span><span class="o">=</span> <span class="n">stab_data</span><span class="p">[</span><span class="s1">&#39;gz&#39;</span><span class="p">],</span> 
+        <span class="n">where</span><span class="o">=</span> <span class="p">[</span><span class="kc">False</span> <span class="p">,</span> <span class="kc">False</span> <span class="p">,</span> <span class="kc">False</span> <span class="p">,</span> <span class="kc">True</span> <span class="p">,</span> <span class="kc">True</span> <span class="p">,</span> <span class="kc">False</span> <span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span> <span class="p">]</span> <span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span>
+        <span class="n">alpha</span><span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;krenging-30-40-grader.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>dir
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Volume in drive C is OSDisk
+ Volume Serial Number is FCEF-E3D7
+
+ Directory of c:\Users\larsenyg\repos\skipsdesign1\exercises
+
+30.04.2023  13:57    &lt;DIR&gt;          .
+30.04.2023  13:57    &lt;DIR&gt;          ..
+30.04.2023  13:58            31�767 30grader.png
+30.04.2023  13:35            33�070 krenging-30-40-grader.png
+30.04.2023  13:58            32�559 krenging-30-grader.png
+30.04.2023  13:35            32�477 krenging-40-grader.png
+30.04.2023  13:56            31�767 rettende-arm-30grader.png
+30.04.2023  13:57            31�767 rettende-arm.png
+29.04.2023  10:27            41�672 stabilitet_store_krengevinkler.ipynb
+29.04.2023  08:46               161 test.md
+               8 File(s)        235�240 bytes
+               2 Dir(s)  404�630�732�800 bytes free
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./exercises"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../teknisk_tegning.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Teknisk tegning</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../markdown-notebooks.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Metasenterets endring ved krenging</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasseselskaps-krav-til-areal-under-gz-kurve">Klasseselskaps krav til areal under GZ-kurve</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#krav-til-rettende-arm">Krav til rettende arm</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#forklarende-plot-brukt-i-losningsforslaget">Forklarende plot brukt i løsningsforslaget</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Lars Erik Nygård et al
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
