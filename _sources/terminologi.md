@@ -1,3 +1,12 @@
+---
+title: Terminologi
+description: Introduksjon til profesjons og bransje ord og uttrykk 
+authors:
+  - name: Lars Erik Nygård
+    email: lars.e.nygard@ntnu.no
+github: https://skipsing.github.io/skipsdesign1/
+date: 30.04.23
+---
 
 (section-label)=
 # Terminologi 
@@ -14,7 +23,7 @@
 Skips- og maritimbransje består av mange ulike ord og utrykk som dere kanskje aldri har hørt om før. Mange av de kommer langt tilbake i tid og har klort seg fast som standard måte å utrykke seg på. 
 
 Et godt eksempel her er lengdeenheten *nautisk mil*, og hastighetsenheten *knop*. Dette er benevnelser som brukes fullt ut også idag. 
-$$ \text{knop} = \frac{\text{nautisk mil}}{\text{time}}$$
+$$\text{knop} = \frac{\text{nautisk mil}}{\text{time}}$$
 
 For å regne ut dette i seilskutetiden så hadde de et tau feste til en bøtte. PÅ tauet var det knyttet knuter med jevne mellomrom. Bøtten ble jevnlig kastet overbord og man telte da antall knuter som passerte over rekka innenfor et bestemt tidsrom. 
 
