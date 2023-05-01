@@ -3,12 +3,29 @@
 
 title: Skipsdesign I
 author: Lars Erik Nygård et al
-logo: skipsing_bilde.png
+logo: images/skipsing_bilde.png
+
+
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
+only_build_toc_files: true
 execute:
   execute_notebooks: force
+  timeout: 2400
+
 
 # Define the name of the latex output file for PDF builds
 latex:

@@ -6,7 +6,7 @@ root: intro
 chapters:
 - file: emneinfo
 - file: terminologi 
-- file: hoveddimensjoner
+- file: notebooks/hoveddimensjoner
 - file: teknisk_tegning
-- file: exercises/stabilitet_store_krengevinkler
-- file: markdown-notebooks
+- file: exercises/stabilitet-store-krengevinkler
+- file: admonition

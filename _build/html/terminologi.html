@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'terminologi';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Teknisk tegning" href="teknisk_tegning.html" />
+    <link rel="next" title="📏 Hoveddimensjoner" href="notebooks/hoveddimensjoner.html" />
     <link rel="prev" title="Emneinfo" href="emneinfo.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -161,13 +161,10 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="emneinfo.html">Emneinfo</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Terminologi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/hoveddimensjoner.html">📏 Hoveddimensjoner</a></li>
 <li class="toctree-l1"><a class="reference internal" href="teknisk_tegning.html">Teknisk tegning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">title: this is a test
-authors: Lars Erik Nygård</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/stabilitet-store-krengevinkler.html">Løsning KN kurver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admonition.html">Admonitions</a></li>
 </ul>
 
     </div>
@@ -361,13 +358,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laeringsutbytte-og-annet">Læringsutbytte og annet</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hoveddimensjoner">Hoveddimensjoner</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laeringsutbytte-og-annet">💡 Læringsutbytte og annet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">Intro</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hoveddimensjoner">📏 Hoveddimensjoner</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lengde">Lengde</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bredde">Bredde</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dybde">Dybde</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensjoner-for-hydrostatikk">🛀 Dimensjoner for hydrostatikk</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dypgang">Dypgang</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blokkoeffisient">Blokkoeffisient</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fribord">Fribord</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begrensninger">Begrensninger</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensjoner-for-hydrostatikk">Dimensjoner for hydrostatikk</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Dimensjoner for hydrostatikk</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dypgang-t">Dypgang (<strong>T</strong>)</a></li>
 </ul>
 </li>
@@ -385,29 +389,40 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="terminologi">
-<span id="section-label"></span><h1>Terminologi<a class="headerlink" href="#terminologi" title="Permalink to this heading">#</a></h1>
+<h1>Terminologi<a class="headerlink" href="#terminologi" title="Permalink to this heading">#</a></h1>
+<blockquote>
+<div><p>May 01, 2023 | 350 ord | 2 min lesetid | <a href="#id2"><span class="problematic" id="id3">:sub-ref:`title`</span></a> |</p>
+</div></blockquote>
 <blockquote>
 <div><p>Terminologi er ord og uttrykk – termar – som er typiske for ei verksemd, eit fag eller ein vitskap.</p>
 </div></blockquote>
 <section id="laeringsutbytte-og-annet">
-<h2>Læringsutbytte og annet<a class="headerlink" href="#laeringsutbytte-og-annet" title="Permalink to this heading">#</a></h2>
+<h2>💡 Læringsutbytte og annet<a class="headerlink" href="#laeringsutbytte-og-annet" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>forstå forskjellen på <span class="math notranslate nohighlight">\(L_{OA}\)</span>, <span class="math notranslate nohighlight">\(L_{PP}\)</span> og <span class="math notranslate nohighlight">\(L_{WL}\)</span></p></li>
 <li><p>Bestemme <em>regellengden</em> <span class="math notranslate nohighlight">\(L_{PP}\)</span> som funksjon av <em>vannlinjelengden</em> <span class="math notranslate nohighlight">\(L_{WL}\)</span></p></li>
 </ul>
+</section>
+<section id="intro">
+<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this heading">#</a></h2>
 <p>Skips- og maritimbransje består av mange ulike ord og utrykk som dere kanskje aldri har hørt om før. Mange av de kommer langt tilbake i tid og har klort seg fast som standard måte å utrykke seg på.</p>
-<p>Et godt eksempel her er lengdeenheten <em>nautisk mil</em>, og hastighetsenheten <em>knop</em>. Dette er benevnelser som brukes fullt ut også idag.
-$<span class="math notranslate nohighlight">\( \text{knop} = \frac{\text{nautisk mil}}{\text{time}}\)</span>$</p>
+<p>Et godt eksempel her er lengdeenheten <em>nautisk mil</em>, og hastighetsenheten <em>knop</em>. Dette er benevnelser som brukes fullt ut også idag.</p>
+<div class="math notranslate nohighlight">
+\[\text{knop} = \frac{\text{nautisk mil}}{\text{time}}\]</div>
 <p>For å regne ut dette i seilskutetiden så hadde de et tau feste til en bøtte. PÅ tauet var det knyttet knuter med jevne mellomrom. Bøtten ble jevnlig kastet overbord og man telte da antall knuter som passerte over rekka innenfor et bestemt tidsrom.</p>
 </section>
 <section id="hoveddimensjoner">
-<h2>Hoveddimensjoner<a class="headerlink" href="#hoveddimensjoner" title="Permalink to this heading">#</a></h2>
-<p>For å beskrive et objekts romlige form brukes ofte <em>lengde</em>, <em>bredde</em> og <em>dybde</em>. For et fartøy er dette fartøyets <em>hoveddimensjoner</em></p>
+<h2>📏 Hoveddimensjoner<a class="headerlink" href="#hoveddimensjoner" title="Permalink to this heading">#</a></h2>
+<p>For å beskrive et objekts romlige form brukes ofte <em>lengde</em>, <em>bredde</em> og <em>dybde</em>. For et fartøy er dette dets <em>hoveddimensjoner</em>.</p>
 <section id="lengde">
 <h3>Lengde<a class="headerlink" href="#lengde" title="Permalink to this heading">#</a></h3>
 <p>For skip så</p>
+<dl class="simple myst">
+<dt>Største lengde</dt><dd><p>Forkortet <em><span class="math notranslate nohighlight">\(L_{OA}\)</span></em> og står for <em>Length Over All</em></p>
+</dd>
+</dl>
 <ul class="simple">
-<li><p>Lengde over alt, forkortet <em><span class="math notranslate nohighlight">\(L_{oa}\)</span></em></p></li>
+<li><p>Lengde over alt, forkortet</p></li>
 <li><p>Perpendikulærlengde, ofte forkortet til bare <em><span class="math notranslate nohighlight">\(L_{pp}\)</span></em> og er vanligvis den lengden man refererer til. Den er definert som lengden mellom der vannlinjen skjærer baugen og senter for roret</p></li>
 </ul>
 <p>Andre lengdebenevninger er <em>fribordslengde</em> etc som vi ikke vil gå noe nærmere inn på dette kurset.</p>
@@ -422,6 +437,20 @@ $<span class="math notranslate nohighlight">\( \text{knop} = \frac{\text{nautisk
 <li><p>Dybde i riss.</p></li>
 </ul>
 </section>
+</section>
+<section id="dimensjoner-for-hydrostatikk">
+<h2>🛀 Dimensjoner for hydrostatikk<a class="headerlink" href="#dimensjoner-for-hydrostatikk" title="Permalink to this heading">#</a></h2>
+<section id="dypgang">
+<h3>Dypgang<a class="headerlink" href="#dypgang" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="blokkoeffisient">
+<h3>Blokkoeffisient<a class="headerlink" href="#blokkoeffisient" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="fribord">
+<h3>Fribord<a class="headerlink" href="#fribord" title="Permalink to this heading">#</a></h3>
+<p>Du kan {Download}`laste ned General Arrangementet av NTNUs eget fartøy &lt; ./resources/165821B6-GA.pdf&gt;</p>
+<p><a href="../resources/165821B6-GA.pdf" download>Download link</a></p>
+</section>
 <section id="begrensninger">
 <h3>Begrensninger<a class="headerlink" href="#begrensninger" title="Permalink to this heading">#</a></h3>
 <p>Vi skal se nærmere på skrogets aspektforhold i neste kapittel, men vil i denne sammenheng nevne:</p>
@@ -433,8 +462,8 @@ $<span class="math notranslate nohighlight">\( \text{knop} = \frac{\text{nautisk
 - $\frac{B}{D} < 2.5$
 <p>OPPGAVER</p>
 </section>
-<section id="dimensjoner-for-hydrostatikk">
-<h3>Dimensjoner for hydrostatikk<a class="headerlink" href="#dimensjoner-for-hydrostatikk" title="Permalink to this heading">#</a></h3>
+<section id="id1">
+<h3>Dimensjoner for hydrostatikk<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>Vi har i det foregående kapittelet funnet de dimensjonene som beskriver den geometriske størrelsen av fartøyet. Nå skal vi se nærmere på noen dimnsjoner for å beregne fartøyets <em>hydrostatikk</em></p>
 <section id="dypgang-t">
 <h4>Dypgang (<strong>T</strong>)<a class="headerlink" href="#dypgang-t" title="Permalink to this heading">#</a></h4>
@@ -485,11 +514,11 @@ $<span class="math notranslate nohighlight">\( \text{knop} = \frac{\text{nautisk
       </div>
     </a>
     <a class="right-next"
-       href="teknisk_tegning.html"
+       href="notebooks/hoveddimensjoner.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Teknisk tegning</p>
+        <p class="prev-next-title">📏 Hoveddimensjoner</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -511,13 +540,20 @@ $<span class="math notranslate nohighlight">\( \text{knop} = \frac{\text{nautisk
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laeringsutbytte-og-annet">Læringsutbytte og annet</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hoveddimensjoner">Hoveddimensjoner</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laeringsutbytte-og-annet">💡 Læringsutbytte og annet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">Intro</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hoveddimensjoner">📏 Hoveddimensjoner</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lengde">Lengde</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bredde">Bredde</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dybde">Dybde</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensjoner-for-hydrostatikk">🛀 Dimensjoner for hydrostatikk</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dypgang">Dypgang</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blokkoeffisient">Blokkoeffisient</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fribord">Fribord</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begrensninger">Begrensninger</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensjoner-for-hydrostatikk">Dimensjoner for hydrostatikk</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Dimensjoner for hydrostatikk</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dypgang-t">Dypgang (<strong>T</strong>)</a></li>
 </ul>
 </li>

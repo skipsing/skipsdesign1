@@ -1,31 +1,48 @@
-
-(section-label)=
+---
+title: Terminologi
+description: Introduksjon til profesjons og bransje ord og uttrykk 
+authors:
+  - name: Lars Erik Nygård
+    email: lars.e.nygard@ntnu.no
+github: https://skipsing.github.io/skipsdesign1/
+date: 30.04.23
+---
 # Terminologi 
+
+> {sub-ref}`today` | {sub-ref}`wordcount-words` ord | {sub-ref}`wordcount-minutes` min lesetid | {sub-ref}`title` |
 
 > Terminologi er ord og uttrykk – termar – som er typiske for ei verksemd, eit fag eller ein vitskap. 
 
-## Læringsutbytte og annet
+## 💡 Læringsutbytte og annet
+
 
 - forstå forskjellen på $L_{OA}$, $L_{PP}$ og $L_{WL}$
 - Bestemme *regellengden* $L_{PP}$ som funksjon av *vannlinjelengden* $L_{WL}$
 
 
-
+## Intro 
 Skips- og maritimbransje består av mange ulike ord og utrykk som dere kanskje aldri har hørt om før. Mange av de kommer langt tilbake i tid og har klort seg fast som standard måte å utrykke seg på. 
 
 Et godt eksempel her er lengdeenheten *nautisk mil*, og hastighetsenheten *knop*. Dette er benevnelser som brukes fullt ut også idag. 
-$$ \text{knop} = \frac{\text{nautisk mil}}{\text{time}}$$
+
+$$\text{knop} = \frac{\text{nautisk mil}}{\text{time}}$$
 
 For å regne ut dette i seilskutetiden så hadde de et tau feste til en bøtte. PÅ tauet var det knyttet knuter med jevne mellomrom. Bøtten ble jevnlig kastet overbord og man telte da antall knuter som passerte over rekka innenfor et bestemt tidsrom. 
 
-## Hoveddimensjoner
+## 📏 Hoveddimensjoner
 
-For å beskrive et objekts romlige form brukes ofte *lengde*, *bredde* og *dybde*. For et fartøy er dette fartøyets *hoveddimensjoner* 
+For å beskrive et objekts romlige form brukes ofte *lengde*, *bredde* og *dybde*. For et fartøy er dette dets *hoveddimensjoner*.  
+
 
 ### Lengde 
 
 For skip så 
-- Lengde over alt, forkortet *$L_{oa}$* 
+
+Største lengde
+: Forkortet *$L_{OA}$* og står for _Length Over All_ 
+
+- Lengde over alt, forkortet 
+
 - Perpendikulærlengde, ofte forkortet til bare *$L_{pp}$* og er vanligvis den lengden man refererer til. Den er definert som lengden mellom der vannlinjen skjærer baugen og senter for roret 
 
 Andre lengdebenevninger er *fribordslengde* etc som vi ikke vil gå noe nærmere inn på dette kurset. 
@@ -37,6 +54,21 @@ Bredde på spant
 
 ### Dybde
 - Dybde i riss. 
+
+
+## 🛀 Dimensjoner for hydrostatikk 
+
+### Dypgang 
+
+### Blokkoeffisient 
+
+### Fribord 
+
+
+Du kan {Download}`laste ned General Arrangementet av NTNUs eget fartøy < ./resources/165821B6-GA.pdf>
+
+<a href="../resources/165821B6-GA.pdf" download>Download link</a> 
+
 
 
 ### Begrensninger 
